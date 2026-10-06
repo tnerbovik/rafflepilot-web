@@ -14,9 +14,9 @@ Publish the main branch from the repository root. Set the custom domain to `raff
 
 ## DNS
 
-As checked on 6 October 2026, the domain is registered at Dynadot and uses Cloudflare nameservers. Edit the records in Cloudflare unless the nameservers are deliberately changed.
+The domain is registered at Dynadot. On 6 October 2026, its DNS setting was switched from Cloudflare name servers to Dynadot DNS, and the records below were saved through the domain settings page. Nameserver propagation and GitHub certificate issuance may take time.
 
-Set these records with DNS-only mode while GitHub validates the domain and issues its certificate:
+The configured records are:
 
 | Type | Name | Value |
 | --- | --- | --- |

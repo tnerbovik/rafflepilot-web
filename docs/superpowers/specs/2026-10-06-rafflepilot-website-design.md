@@ -39,9 +39,9 @@ Publish from the main branch root using GitHub Pages. A CNAME file contains raff
 
 ## Domain and hosting
 
-DNS inspection on 6 October 2026 found Cloudflare nameservers for rafflepilot.app. Dynadot is the registrar, but Cloudflare currently controls DNS. Configure GitHub Pages with rafflepilot.app before changing DNS, and retain unrelated email and verification records.
+DNS inspection on 6 October 2026 initially found Cloudflare nameservers for rafflepilot.app. The user then provided the Dynadot domain settings page. The domain was switched to Dynadot DNS and the GitHub Pages records were saved there after configuring rafflepilot.app in GitHub Pages. Public queries found no apex MX, TXT, or CAA records and no DMARC record; Dynadot email settings were not configured.
 
-Keep the current nameservers unless the user requests a DNS migration. At the active DNS provider, point the apex domain to GitHub Pages with the four documented A records and point www to tnerbovik.github.io. Ensure HTTPS works for the custom domain and the www redirect. If account access is unavailable, provide the exact records and remaining account steps after deploying and verifying the GitHub Pages URL.
+Dynadot DNS now contains the four documented GitHub Pages A records and a www CNAME pointing to tnerbovik.github.io. Verify propagation, then enforce HTTPS when GitHub has issued the certificate. Verify the custom domain and www redirect before claiming the domain is live.
 
 ## Verification and acceptance
 
