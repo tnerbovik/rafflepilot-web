@@ -24,7 +24,9 @@ Run `python3 -m http.server 8765` from this directory, then open http://localhos
 
 Publish the main branch from the repository root. Set the custom domain to `rafflepilot.app` in Settings → Pages. The CNAME file preserves that setting for branch deployments. Enable Enforce HTTPS when GitHub finishes issuing the certificate.
 
-On 6 October 2026, DNS resolved to GitHub Pages and the placeholder/logo deployments succeeded. The custom-domain HTTPS certificate remained unavailable at the last check; do not treat successful HTTP serving as confirmation of secure browser access. The `.app` domain requires a valid certificate for normal browser use.
+On 6 October 2026, the complete marketing page deployed successfully. Published HTML, CSS, all six screenshots, the badge, social preview, 404 page, robots.txt, and sitemap matched the verified local files. Desktop and 360px mobile layouts were checked, and an independent review found no code issues.
+
+The custom-domain HTTPS certificate remained unavailable at the last check. Public Cloudflare, Google, and Quad9 DNS queries returned Dynadot nameservers and the correct GitHub Pages addresses, but GitHub's DNS health check still reported the previous Cloudflare addresses. Certificate provisioning was restarted after verifying the new records. Do not treat successful HTTP serving as confirmation of secure browser access; `.app` requires a valid certificate for normal browser use.
 
 ## DNS
 
