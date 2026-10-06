@@ -49,6 +49,15 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .phone { border: 6px solid #16392d; border-radius: 36px; box-shadow: 0 24px 50px #082a2024; background: #0a3728; aspect-ratio: 780/1695; object-fit: cover; }
 .hero-winner { position: absolute; width: 266px; right: 14px; top: 0; transform: rotate(4deg); z-index: 2; box-shadow: 0 28px 70px #001a1a66; }
 .hero-setup { position: absolute; width: 220px; left: 2px; top: 58px; transform: rotate(-7deg); border-color: #bfdbcc; box-shadow: 0 22px 60px #001a1a55; }
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .site-header { animation: hero-enter .45s cubic-bezier(.22, 1, .36, 1) backwards; }
+  .hero-copy { animation: hero-enter .6s cubic-bezier(.22, 1, .36, 1) .08s backwards; }
+  .hero-visual { animation: hero-enter .7s cubic-bezier(.22, 1, .36, 1) .16s backwards; }
+}
 .trust-strip { border-top: 1px solid #bddcc421; display: flex; justify-content: center; gap: 66px; padding-block: 27px 32px; color: #cbdfd3; font-size: 14px; }
 .trust-strip i { font-style: normal; color: #73dfa8; margin-right: 10px; }
 .light-shell { background: var(--paper); }
