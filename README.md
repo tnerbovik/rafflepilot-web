@@ -9,6 +9,7 @@ The site uses plain HTML and one shared stylesheet (`assets/site.css`). Images a
 ## Asset sources
 
 - Official light and dark logo vectors: `assets/art-src/logo-{light,dark}.svg` in the RafflePilot app project.
+- Eight format icons in `assets/modes/`: original vectors copied unchanged from the app project's `assets/art-src/`, including Quick Draw.
 - App screenshots: the app project's `docs/store/2.0.0/screenshots/ios/`, exported as optimized WebP files.
 - Golden Draw: a cropped still from the developer's app recording, excluding the capture border and cursor.
 - App Store badge: [Apple's official artwork](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg), used unchanged.
