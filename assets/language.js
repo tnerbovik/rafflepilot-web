@@ -5,12 +5,15 @@
     try { localStorage.setItem(preferenceKey, language); } catch { /* Links still work without storage. */ }
   };
 
-  document.querySelectorAll('[data-language]').forEach(link => {
-    link.addEventListener('click', () => {
-      remember(link.dataset.language);
-      link.hash = location.hash;
+  const picker = document.querySelector('[data-language-select]');
+  if (picker) {
+    picker.disabled = false;
+    picker.addEventListener('change', () => {
+      if (!supported(picker.value)) return;
+      remember(picker.value);
+      location.assign((picker.value === 'nb' ? '/no/' : '/?lang=en') + location.hash);
     });
-  });
+  }
 
   // A direct /no/ link always opens Norwegian. Only the default landing page
   // selects a language automatically; the explicit English link also works

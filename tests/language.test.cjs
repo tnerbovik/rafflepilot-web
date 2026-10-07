@@ -9,6 +9,7 @@ const source = existsSync(path) ? readFileSync(path, 'utf8') : '';
 
 function visit({ languages = ['en-US'], saved, pathname = '/', search = '', hash = '', blocked = false } = {}) {
   const redirects = [];
+  const picker = { value: pathname.startsWith('/no/') ? 'nb' : 'en', disabled: true, listeners: {}, addEventListener(event, callback) { this.listeners[event] = callback; } };
   const choices = ['en', 'nb'].map(language => ({
     dataset: { language }, hash: '', listeners: {},
     addEventListener(event, callback) { this.listeners[event] = callback; }
@@ -16,15 +17,15 @@ function visit({ languages = ['en-US'], saved, pathname = '/', search = '', hash
   let preference = saved;
   vm.runInNewContext(source, {
     navigator: { languages, language: languages[0] },
-    location: { pathname, search, hash, replace(url) { redirects.push(url); } },
+    location: { pathname, search, hash, replace(url) { redirects.push(url); }, assign(url) { redirects.push(url); } },
     localStorage: {
       getItem() { if (blocked) throw new Error('Storage unavailable'); return preference; },
       setItem(key, value) { if (blocked) throw new Error('Storage unavailable'); preference = value; }
     },
     URLSearchParams,
-    document: { querySelectorAll() { return choices; } }
+    document: { querySelectorAll() { return choices; }, querySelector() { return picker; } }
   });
-  return { redirects, preference: () => preference, choices };
+  return { redirects, preference: () => preference, choices, picker };
 }
 
 test('Norwegian browser preferences open the Norwegian page and preserve the section', () => {
@@ -59,11 +60,20 @@ test('automatic selection still works when storage is blocked', () => {
   assert.deepEqual(visit({ languages: ['nn-NO'], blocked: true }).redirects, ['/no/']);
 });
 
-test('manual language selection remembers the choice and preserves the section', () => {
+test('the language dropdown remembers the choice and preserves the section', () => {
   const page = visit({ pathname: '/no/', hash: '#audience-title' });
-  const english = page.choices[0];
-  assert.equal(typeof english.listeners.click, 'function');
-  english.listeners.click();
+  page.picker.value = 'en';
+  assert.equal(typeof page.picker.listeners.change, 'function');
+  page.picker.listeners.change();
   assert.equal(page.preference(), 'en');
-  assert.equal(english.hash, '#audience-title');
+  assert.deepEqual(page.redirects, ['/?lang=en#audience-title']);
+  assert.equal(page.picker.disabled, false);
+});
+
+test('the dropdown switches to Norwegian even when storage is blocked', () => {
+  const page = visit({ blocked: true, hash: '#features' });
+  page.picker.value = 'nb';
+  assert.equal(typeof page.picker.listeners.change, 'function');
+  page.picker.listeners.change();
+  assert.deepEqual(page.redirects, ['/no/#features']);
 });
