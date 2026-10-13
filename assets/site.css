@@ -269,3 +269,16 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
   .store-link { transition: none; }
   .store-link:hover { transform: none; }
 }
+
+/* Legal and support pages: a quiet single column on the light page. */
+.legal { max-width: 720px; padding-block: 56px 40px; }
+.legal .brand { display: inline-block; margin-bottom: 40px; }
+.legal .eyebrow { margin-bottom: 14px; }
+.legal h1 { font-size: clamp(34px, 5vw, 52px); margin-bottom: 12px; }
+.legal h2 { font-size: 24px; letter-spacing: -.02em; margin: 2.2em 0 .6em; }
+.legal h3 { font-size: 18px; margin: 1.6em 0 .4em; }
+.legal p { line-height: 1.65; }
+.legal a { color: #12884f; }
+.legal .updated, .legal-more { color: var(--muted); font-size: 15px; }
+.legal-footer { max-width: 720px; padding-block: 24px 48px; color: var(--muted); font-size: 14px; border-top: 1px solid rgba(7, 61, 43, .12); }
+.legal-footer a { color: inherit; }
