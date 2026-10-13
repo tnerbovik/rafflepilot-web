@@ -2,15 +2,15 @@
 
 Static website for [rafflepilot.app](https://rafflepilot.app), hosted on GitHub Pages under the tnerbovik account.
 
-The marketing page presents real app screenshots and features for ticket books, custom lists, bingo, Golden Draw, prizes, and winner history. It links to the released iPhone app and announces the upcoming Android version. The design is in [the design document](docs/superpowers/specs/2026-10-06-rafflepilot-website-design.md).
+The marketing page presents real app screenshots and features for ticket books, custom lists, bingo, the Race and Last one standing games, Golden Draw, prizes, and winner history. It links to the released iPhone app and announces the upcoming Android version. The design is in [the design document](docs/superpowers/specs/2026-10-06-rafflepilot-website-design.md).
 
 The site uses plain HTML and one shared stylesheet (`assets/site.css`). Images are local, and navigation works without JavaScript. `404.html`, `robots.txt`, `sitemap.xml`, and the social preview support publishing and discovery.
 
 ## Asset sources
 
 - Official light and dark logo vectors: `assets/art-src/logo-{light,dark}.svg` in the RafflePilot app project.
-- Eight format icons in `assets/modes/`: original vectors copied unchanged from the app project's `assets/art-src/`, including Quick Draw.
-- App screenshots: the app project's `docs/store/2.0.0/screenshots/ios/`, exported as optimized WebP files.
+- Ten format icons in `assets/modes/`: original vectors copied unchanged from the app project's `assets/art-src/`, including Quick Draw (`race.svg` and `knockout.svg`, the latter saved as `last-one-standing.svg`).
+- App screenshots: the app project's `docs/store/2.0.0/screenshots/ios/`, exported as optimized WebP files. `race.webp` and `last-one-standing.webp` are iPhone 17 Pro Max simulator captures of the 2.1 games, scaled to 780×1695.
 - Golden Draw: a cropped still from the developer's app recording, excluding the capture border and cursor.
 - App Store badge: [Apple's official artwork](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg), used unchanged.
 - App icon: the published RafflePilot App Store icon.
