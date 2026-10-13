@@ -73,6 +73,9 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .mode-card img { width: 96px; height: 96px; margin: 0 auto 18px; }
 .mode-card h3 { font-size: 18px; margin-bottom: 9px; }
 .mode-card p { color: var(--muted); font-size: 14px; line-height: 1.55; margin: 0; }
+.soon-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: #fff0c2; color: #6b4a00; font-size: 12px; font-weight: 700; letter-spacing: .02em; line-height: 1.4; white-space: nowrap; }
+.mode-card .soon-badge { margin-bottom: 8px; }
+.section-number .soon-badge { margin-left: 10px; text-transform: none; }
 .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; padding-block: 42px 76px; }
 .feature-copy > p:not(.section-number) { font-size: 18px; color: var(--muted); max-width: 465px; }
 .section-number { display: flex; align-items: center; gap: 14px; font-size: 12px; color: #448566; font-weight: 700; margin-bottom: 24px; }
