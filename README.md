@@ -48,3 +48,15 @@ Replace conflicting website records for the apex and www; preserve unrelated ema
 ## Earlier website concepts
 
 The conversations “Dynadot hosting options” and “Markedsføringsstrategi for app” established a raffle-focused landing page: actual app screenshots, ticket and prize imagery, prominent offline and privacy benefits, and repeated App Store actions. The user explicitly rejected aviation imagery and metaphors. The current hosting choice is GitHub Pages.
+
+## Store link tracking
+
+Every store button carries a campaign name, so downloads from the site show up in the store reports
+without cookies or a tracking script:
+
+- App Store: `https://apps.apple.com/app/apple-store/id6786706971?pt=129115035&ct=<name>&mt=8`
+  (App Store Connect → Analytics → Acquisition → Campaigns; a campaign shows once 5+ accounts installed from it).
+- Google Play: `…details?id=com.tnerbovik.RafflePilot&referrer=utm_source%3Drafflepilot.app%26utm_medium%3Dwebsite%26utm_campaign%3D<name>`
+  (Play Console → Grow users → Store performance → traffic sources / UTM campaigns).
+
+Names in use: `website-hero`, `website-bottom`, `raffle-page-hero`, `raffle-page-bottom`.
