@@ -68,10 +68,10 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .modes-heading h2 { margin-bottom: 20px; }
 .modes-heading > p:not(.section-number) { color: var(--muted); font-size: 16px; margin-bottom: 0; }
 .modes-heading .section-number { justify-content: center; }
-.modes-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; padding: 0; margin: 0; }
+.modes-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; padding: 0; margin: 0; }
 .mode-card { padding: 30px 24px; border-top: 1px solid #143e2d14; border-left: 1px solid #143e2d14; text-align: center; }
-.mode-card:nth-child(-n+5) { border-top: 0; }
-.mode-card:nth-child(5n+1) { border-left: 0; }
+.mode-card:nth-child(-n+4) { border-top: 0; }
+.mode-card:nth-child(4n+1) { border-left: 0; }
 .mode-card img { width: 96px; height: 96px; margin: 0 auto 18px; }
 .mode-card h3 { font-size: 18px; margin-bottom: 9px; }
 .mode-card p { color: var(--muted); font-size: 14px; line-height: 1.55; margin: 0; }
@@ -305,3 +305,12 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .plans-note { text-align: center; color: var(--muted); font-size: 14px; margin: 28px 0 0; }
 @media (max-width: 800px) { .plans-grid { grid-template-columns: 1fr; } .plans-section { padding-block: 56px 64px; } }
 @media (max-width: 520px) { .plan-card { padding: 24px 22px 4px; } .plans-section h2 { font-size: 36px; } }
+
+/* Landing pages: a longer h1 that wraps, and a closing line of links */
+.hero .hero-title.page-title { white-space: normal; font-size: clamp(44px, 4.4vw, 64px); max-width: 640px; }
+@media (max-width: 800px) { .hero .hero-title.page-title { font-size: clamp(40px, 7.5vw, 56px); margin-inline: auto; } }
+@media (max-width: 520px) { .hero .hero-title.page-title { font-size: clamp(34px, 9.5vw, 44px); } }
+.more-section { text-align: center; color: var(--muted); font-size: 16px; line-height: 1.7; padding-block: 0 72px; max-width: 720px; }
+.more-section p { margin: 0; }
+.more-section a { color: #178c52; }
+.inline-link { color: #178c52; white-space: nowrap; }
