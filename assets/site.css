@@ -86,8 +86,8 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .screen-stage > .phone { width: 266px; max-width: 85%; }
 .golden-section { background: radial-gradient(ellipse at 85% 50%, #246444, #073d2b 65%); color: white; border-radius: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-block: 22px 60px; overflow: hidden; padding: 48px 72px; }
 .golden-copy p:not(.eyebrow) { color: #ccdfd1; max-width: 420px; font-size: 18px; }
-.golden-visual { display: flex; justify-content: center; }
-.golden-visual img { width: 330px; border-radius: 22px; box-shadow: 0 12px 48px #001e1d33; }
+.golden-visual { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.golden-visual img { width: 100%; max-width: 420px; height: auto; filter: drop-shadow(0 18px 30px #001e1d55); }
 .feature-reverse .feature-copy { grid-column: 2; grid-row: 1; }
 .feature-reverse .screen-stage { grid-column: 1; grid-row: 1; }
 .bingo-stage { background: linear-gradient(150deg, #dae9d8, #e7edca); }
@@ -185,7 +185,7 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
   .feature-reverse .feature-copy, .feature-reverse .screen-stage { grid-column: auto; grid-row: auto; }
   .golden-section { grid-template-columns: 1fr; gap: 24px; padding: 42px; margin-block: 24px 38px; }
   .golden-copy p:not(.eyebrow) { max-width: 100%; }
-  .golden-visual img { width: 290px; }
+  .golden-visual img { max-width: 340px; }
   .history-stage .history-main { width: 255px; right: 48px; }
   .history-stage .raffles-companion { width: 214px; left: 30px; top: 110px; }
   .how-section { padding-block: 62px; }
@@ -314,3 +314,4 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .more-section p { margin: 0; }
 .more-section a { color: #178c52; }
 .inline-link { color: #178c52; white-space: nowrap; }
+.golden-chip { background: linear-gradient(135deg, #ffe28a, #fec84b); color: #3b2a06; font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 999px; box-shadow: 0 6px 18px #001e1d40; }

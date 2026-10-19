@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="400" viewBox="0 0 440 400" role="img" aria-label="Golden Draw: winning ticket A27 on gold foil with a star medal and confetti">
+  <style>
+    .cf, .ticket, .medal, .rays { transform-box: fill-box; transform-origin: center; }
+    .cf { animation: drift 5.2s ease-in-out infinite alternate; }
+    .cf1 { animation-duration: 6.1s; animation-name: drift2; }
+    .cf2 { animation-duration: 4.6s; }
+    .cf3 { animation-duration: 6.8s; animation-name: drift2; }
+    .cf4 { animation-duration: 5.7s; }
+    .cf5 { animation-duration: 7.3s; animation-name: drift2; }
+    .rays { animation: pulse 3.6s ease-in-out infinite; }
+    .ticket { animation: float 6s ease-in-out infinite; }
+    .medal { animation: bob 4.4s ease-in-out infinite; }
+    @keyframes drift { from { transform: translate(0, -6px) rotate(-14deg); } to { transform: translate(4px, 7px) rotate(16deg); } }
+    @keyframes drift2 { from { transform: translate(3px, 6px) rotate(12deg); } to { transform: translate(-4px, -7px) rotate(-18deg); } }
+    @keyframes pulse { 0%, 100% { opacity: .4; transform: scale(.96); } 50% { opacity: .7; transform: scale(1.04); } }
+    @keyframes float { 0%, 100% { transform: translateY(-3px) rotate(-1.2deg); } 50% { transform: translateY(4px) rotate(1.2deg); } }
+    @keyframes bob { 0%, 100% { transform: translateY(-3px) rotate(-6deg); } 50% { transform: translateY(3px) rotate(6deg); } }
+    @media (prefers-reduced-motion: reduce) { .cf, .rays, .ticket, .medal { animation: none; } }
+  </style>
+  <defs>
+    <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF2C2"/><stop offset=".28" stop-color="#FFD45E"/><stop offset=".55" stop-color="#F2B230"/><stop offset=".78" stop-color="#FFE08A"/><stop offset="1" stop-color="#D9971C"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0" y1="0" x2=".7" y2="1">
+      <stop offset="0" stop-color="#FFE7A0"/><stop offset="1" stop-color="#FEC84B"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFD45E" stop-opacity=".45"/><stop offset=".6" stop-color="#FFD45E" stop-opacity=".1"/><stop offset="1" stop-color="#FFD45E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="medal" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#FFF0B8"/><stop offset=".5" stop-color="#F6BE3A"/><stop offset="1" stop-color="#C98A12"/>
+    </radialGradient>
+    <!-- The ticket outline with the stub notches cut out -->
+    <mask id="notches">
+      <rect x="-200" y="-100" width="400" height="200" fill="#fff"/>
+      <circle cx="58" cy="-70" r="11" fill="#000"/><circle cx="58" cy="70" r="11" fill="#000"/>
+      <circle cx="-150" cy="0" r="13" fill="#000"/><circle cx="150" cy="0" r="13" fill="#000"/>
+    </mask>
+    <clipPath id="ticketClip"><rect x="-150" y="-70" width="300" height="140" rx="18"/></clipPath>
+  </defs>
+
+  <!-- Glow and rays behind the ticket -->
+  <circle cx="220" cy="214" r="190" fill="url(#glow)"/>
+  <g transform="translate(220 214)"><g class="rays" stroke="#FFD45E" stroke-linecap="round" opacity=".55">
+    <path d="M0-120V-160M85-85L113-113M120 0H160M85 85L113 113M0 120V160M-85 85L-113 113M-120 0H-160M-85-85L-113-113" stroke-width="5"/>
+    <path d="M46-111L61-148M111-46L148-61M111 46L148 61M46 111L61 148M-46 111L-61 148M-111 46L-148 61M-111-46L-148-61M-46-111L-61-148" stroke-width="3" opacity=".7"/>
+  </g></g>
+
+  <!-- Confetti: each piece drifts and twists on its own loop -->
+  <g opacity=".95">
+    <g class="cf cf0" style="animation-delay:-0.00s"><rect x="66" y="96" width="9" height="20" rx="2" fill="#FFD45E" transform="rotate(-24 70 106)"/></g>
+    <g class="cf cf1" style="animation-delay:-0.73s"><rect x="352" y="84" width="8" height="18" rx="2" fill="#fff" transform="rotate(30 356 93)"/></g>
+    <g class="cf cf2" style="animation-delay:-1.46s"><rect x="384" y="236" width="9" height="20" rx="2" fill="#FEC84B" transform="rotate(62 388 246)"/></g>
+    <g class="cf cf3" style="animation-delay:-2.19s"><rect x="48" y="300" width="8" height="18" rx="2" fill="#fff" opacity=".8" transform="rotate(-50 52 309)"/></g>
+    <g class="cf cf4" style="animation-delay:-2.92s"><rect x="300" y="340" width="9" height="19" rx="2" fill="#FFE7A0" transform="rotate(18 304 349)"/></g>
+    <g class="cf cf5" style="animation-delay:-3.65s"><rect x="136" y="352" width="7" height="16" rx="2" fill="#31BD79" transform="rotate(-12 139 360)"/></g>
+    <g class="cf cf0" style="animation-delay:-4.38s"><rect x="248" y="54" width="7" height="16" rx="2" fill="#31BD79" transform="rotate(40 251 62)"/></g>
+    <g class="cf cf1" style="animation-delay:-0.11s"><circle cx="112" cy="70" r="5" fill="#fff" opacity=".85"/></g>
+    <g class="cf cf2" style="animation-delay:-0.84s"><circle cx="396" cy="150" r="5" fill="#FFD45E"/></g>
+    <g class="cf cf3" style="animation-delay:-1.57s"><circle cx="34" cy="206" r="4" fill="#FFE7A0"/></g>
+    <g class="cf cf4" style="animation-delay:-2.30s"><circle cx="364" cy="320" r="4" fill="#fff" opacity=".8"/></g>
+    <g class="cf cf5" style="animation-delay:-3.03s"><circle cx="196" cy="372" r="4" fill="#FFD45E"/></g>
+    <g class="cf cf0" style="animation-delay:-3.76s"><circle cx="300" cy="40" r="3.5" fill="#fff" opacity=".7"/></g>
+    <g class="cf cf1" style="animation-delay:-4.49s"><path d="M76 250l5 10 10 5-10 5-5 10-5-10-10-5 10-5z" fill="#FFF2C2"/></g>
+    <g class="cf cf2" style="animation-delay:-0.22s"><path d="M372 104l4 8 8 4-8 4-4 8-4-8-8-4 8-4z" fill="#FFF2C2"/></g>
+  </g>
+
+  <!-- The golden ticket -->
+  <g transform="translate(220 220) rotate(-9)"><g class="ticket">
+    <g mask="url(#notches)">
+      <rect x="-150" y="-66" width="300" height="140" rx="18" fill="#9A6408" opacity=".55"/>
+      <rect x="-150" y="-70" width="300" height="140" rx="18" fill="url(#foil)"/>
+      <rect x="-140" y="-60" width="280" height="120" rx="11" fill="url(#face)"/>
+      <g clip-path="url(#ticketClip)"><rect x="-210" y="-90" width="70" height="200" fill="url(#shine)" transform="rotate(18) translate(120 0)"/></g>
+    </g>
+    <rect x="-128" y="-48" width="176" height="96" rx="8" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+    <text x="-40" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="800" letter-spacing="-1" fill="#3B2A06">A27</text>
+    <g fill="#C98A12" opacity=".7"><circle cx="100" cy="-24" r="4"/><circle cx="100" cy="0" r="4"/><circle cx="100" cy="24" r="4"/></g>
+  </g></g>
+
+  <!-- Star medal -->
+  <g transform="translate(352 140)"><g class="medal">
+    <circle r="31" fill="#9A6408" opacity=".5" cy="3"/>
+    <circle r="30" fill="url(#medal)"/>
+    <circle r="23" fill="none" stroke="#FFF2C2" stroke-opacity=".7" stroke-width="2"/>
+    <path d="M0-14l4.1 8.4 9.2 1.3-6.7 6.5 1.6 9.2L0 7.1l-8.2 4.3 1.6-9.2-6.7-6.5 9.2-1.3z" fill="#3B2A06"/>
+  </g></g>
+</svg>
