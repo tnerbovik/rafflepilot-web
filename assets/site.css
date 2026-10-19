@@ -29,7 +29,7 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .nav-download { border: 1px solid #91b8a67a; border-radius: 100px; padding: 12px 20px; }
 .nav-download span { margin-left: 14px; }
 .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 24px; align-items: center; padding-block: 48px 76px; min-height: 720px; }
-.eyebrow { font-size: 11px; text-transform: uppercase; font-weight: 750; letter-spacing: 2px; line-height: 1.5; margin-bottom: 24px; color: #438061; }
+.eyebrow { font-size: 11px; text-transform: uppercase; font-weight: 750; letter-spacing: 2px; line-height: 1.5; margin-bottom: 24px; color: #367a59; }
 .hero .eyebrow, .download-section .eyebrow, .golden-section .eyebrow { color: #ffe091; }
 .status-dot { display: inline-block; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
 .hero .hero-title { font-size: clamp(54px, 5.7vw, 82px); margin-bottom: 26px; white-space: nowrap; }
@@ -77,7 +77,7 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .mode-card p { color: var(--muted); font-size: 14px; line-height: 1.55; margin: 0; }
 .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; padding-block: 42px 76px; }
 .feature-copy > p:not(.section-number) { font-size: 18px; color: var(--muted); max-width: 465px; }
-.section-number { display: flex; align-items: center; gap: 14px; font-size: 12px; color: #448566; font-weight: 700; margin-bottom: 24px; }
+.section-number { display: flex; align-items: center; gap: 14px; font-size: 12px; color: #367a59; font-weight: 700; margin-bottom: 24px; }
 .section-number span { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; border-left: 1px solid #bfd2c3; padding-left: 14px; }
 .check-list { list-style: none; padding: 0; margin: 26px 0; color: #2f5945; font-size: 15px; line-height: 1.6; }
 .check-list li { position: relative; padding-left: 27px; margin-bottom: 12px; }
@@ -312,8 +312,8 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 @media (max-width: 520px) { .hero .hero-title.page-title { font-size: clamp(34px, 9.5vw, 44px); } }
 .more-section { text-align: center; color: var(--muted); font-size: 16px; line-height: 1.7; padding-block: 0 72px; max-width: 720px; }
 .more-section p { margin: 0; }
-.more-section a { color: #178c52; }
-.inline-link { color: #178c52; white-space: nowrap; }
+.more-section a { color: #127a47; }
+.inline-link { color: #127a47; white-space: nowrap; }
 .golden-chip { background: linear-gradient(135deg, #ffe28a, #fec84b); color: #3b2a06; font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 999px; box-shadow: 0 6px 18px #001e1d40; }
 
 /* Hero: slow, subtle movement (only when the visitor hasn't asked for reduced motion) */
