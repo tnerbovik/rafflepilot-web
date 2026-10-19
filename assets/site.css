@@ -38,7 +38,9 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
 .hero-actions { display: flex; align-items: center; gap: 26px; }
 .store-link { display: inline-block; flex-shrink: 0; transition: transform .18s; text-decoration: none; }
 .store-link:hover { transform: translateY(-3px); }
-.store-link img { width: 180px; height: 60px; }
+.store-link img { width: auto; height: 60px; }
+.store-badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.download-inner .store-badges { justify-content: center; }
 .text-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; text-decoration: none; }
 .text-link span { margin-left: 8px; color: var(--gold); }
 .platform-note { font-size: 12px; color: #aac9b8; margin-top: 20px; margin-bottom: 0; }
@@ -165,6 +167,7 @@ a:focus-visible { outline: 3px solid #d39300; outline-offset: 6px; border-radius
   .hero h1 { font-size: clamp(48px, 8.5vw, 72px); white-space: normal; }
   .hero-intro { max-width: 490px; margin-inline: auto; }
   .hero-actions { flex-direction: row; align-items: center; justify-content: center; }
+  .hero-actions .store-badges { justify-content: center; }
   .hero-visual { width: min(460px, 100%); height: 590px; margin-inline: auto; }
   .hero-winner { width: 253px; right: 14px; top: 0; }
   .hero-setup { width: 211px; left: 12px; top: 56px; }

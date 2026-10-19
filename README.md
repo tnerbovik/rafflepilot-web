@@ -2,7 +2,7 @@
 
 Static website for [rafflepilot.app](https://rafflepilot.app), hosted on GitHub Pages under the tnerbovik account.
 
-The marketing page presents real app screenshots and features for ticket books, custom lists, bingo, the Race and Last one standing games, Golden Draw, prizes, and winner history. It links to the released iPhone app and announces the upcoming Android version. The design is in [the design document](docs/superpowers/specs/2026-10-06-rafflepilot-website-design.md).
+The marketing page presents real app screenshots and features for ticket books, custom lists, bingo, the Race and Last one standing games, Golden Draw, prizes, and winner history. It links to the app on the App Store and Google Play. The Google Play badge (`assets/google-play-badge.png`) is Google's official badge, cropped to its visible area. The design is in [the design document](docs/superpowers/specs/2026-10-06-rafflepilot-website-design.md).
 
 The site uses plain HTML and one shared stylesheet (`assets/site.css`). Images are local, and navigation works without JavaScript. `404.html`, `robots.txt`, `sitemap.xml`, and the social preview support publishing and discovery.
 
